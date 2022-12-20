@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk 33
+    buildToolsVersion = '33'
+    defaultConfig {
+        applicationId "one.everett.tengwarcalendar"
+        minSdkVersion 16
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        dataBinding {
+            enabled = true
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.4.4'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.fragment:fragment:1.4.1'
+    testImplementation 'junit:junit:4.13.2'
+}
