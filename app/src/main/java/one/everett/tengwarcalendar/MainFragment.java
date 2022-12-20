@@ -33,7 +33,7 @@ public class MainFragment extends Fragment {
     private static final String KEY_YEAR_MONTH = "yearMonth";
 
     private final LocalDate today;
-    private final Map<DayOfWeek, TextView> dayHeaders = new EnumMap<>(DayOfWeek.class);
+    // private final Map<DayOfWeek, TextView> dayHeaders = new EnumMap<>(DayOfWeek.class);
     private final List<Map<DayOfWeek, TextView>> dayCells = new ArrayList<>();
 
     private YearMonth yearMonth;
@@ -108,7 +108,7 @@ public class MainFragment extends Fragment {
             params.setMargins(2, 2, 2, 2);
             ui.calendarGrid.addView(dayHeader, params);
 
-            dayHeaders.put(day, dayHeader);
+            // dayHeaders.put(day, dayHeader);
         }
 
         for (int i = 0; i < 6; i++) {

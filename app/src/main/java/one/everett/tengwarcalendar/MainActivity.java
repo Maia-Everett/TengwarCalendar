@@ -16,7 +16,7 @@ public class MainActivity extends FragmentActivity implements YearDialogFragment
     private static final String KEY_YEAR_MONTH = "yearMonth";
 
     private ViewPager viewPager;
-    private MainFragment fragment;
+    // private MainFragment fragment;
     private YearMonth yearMonth;
 
     @Override
